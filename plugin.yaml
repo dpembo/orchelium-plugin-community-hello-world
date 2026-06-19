@@ -1,12 +1,12 @@
 name: Test
 version: 2.1.0
-label: Mount / Unmount
+label: Test
 description: |
   Test Mount or unmount filesystems on the agent — NFS, CIFS/SMB, ext4/xfs/btrfs
   block devices, LUKS encrypted volumes, loop files, bind mounts, and tmpfs.
   Can also check whether a path is currently mounted.
 source: official
-maintainer: "Orchelium"
+maintainer: "pembo"
 repository_url: "https://github.com/dpembo/orchelium-plugins"
 category: storage
 tags: [mount, nfs, smb, luks, filesystem]
