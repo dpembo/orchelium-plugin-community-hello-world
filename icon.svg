@@ -1,14 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
-  <!-- Drive/disk base -->
-  <rect x="8" y="28" width="32" height="12" rx="3"
-        fill="#F3E5F5" stroke="#6A1B9A" stroke-width="2"/>
-  <!-- Drive activity LED -->
-  <circle cx="36" cy="34" r="2" fill="#AB47BC"/>
-  <!-- Upward mount arrow -->
-  <line x1="24" y1="26" x2="24" y2="10" stroke="#6A1B9A" stroke-width="2.4" stroke-linecap="round"/>
-  <polygon points="24,8 19,16 29,16" fill="#6A1B9A"/>
-  <!-- Horizontal bar at top (mount point / folder line) -->
-  <line x1="14" y1="8" x2="34" y2="8" stroke="#6A1B9A" stroke-width="2.4" stroke-linecap="round"/>
-  <!-- Label -->
-  <text x="24" y="47" text-anchor="middle" font-family="monospace" font-size="9" font-weight="bold" fill="#6A1B9A">mount</text>
+  <!-- Speech bubble body -->
+  <path d="M8 8 Q8 4 12 4 L36 4 Q40 4 40 8 L40 28 Q40 32 36 32 L28 32 L22 42 L18 32 L12 32 Q8 32 8 28 Z"
+        fill="none" stroke="#175DDC" stroke-width="3" stroke-linejoin="round"/>
+  <!-- "Hi!" text lines -->
+  <!-- H - left vertical -->
+  <line x1="16" y1="13" x2="16" y2="23" stroke="#175DDC" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- H - right vertical -->
+  <line x1="21" y1="13" x2="21" y2="23" stroke="#175DDC" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- H - crossbar -->
+  <line x1="16" y1="18" x2="21" y2="18" stroke="#175DDC" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- i - dot -->
+  <circle cx="26.5" cy="13" r="1.5" fill="#175DDC"/>
+  <!-- i - stem -->
+  <line x1="26.5" y1="16" x2="26.5" y2="23" stroke="#175DDC" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- ! - stem -->
+  <line x1="32" y1="13" x2="32" y2="20" stroke="#175DDC" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- ! - dot -->
+  <circle cx="32" cy="23" r="1.5" fill="#175DDC"/>
 </svg>
