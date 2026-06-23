@@ -55,17 +55,13 @@ fi
 # STEP 2 — Parse inputs
 # =============================================================================
 # parse_field() extracts a single named field from the INPUT_JSON string using
-# Python's json module. This is the recommended approach for Orchelium plugins
-# because it handles quoted strings, unicode, and nested values safely without
-# requiring jq to be installed on the agent.
-#
-# For plugins with many fields, define all parse_field calls together here so
-# there is one clear place to see every input the plugin accepts.
+# grep. This is a simple approach that works for flat JSON objects with string values.
+# For nested structures or more complex parsing, consider using jq or a similar tool.
 
 parse_field() {
   local field="$1"
-  python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('$field',''))" \
-    <<< "$INPUT_JSON" 2>/dev/null || echo ""
+  # -P uses Perl regex, -o outputs ONLY the matching part
+  echo "$INPUT_JSON" | grep -Po '"'"$field"'"\s*:\s*"\K[^"]*' 2>/dev/null || echo ""
 }
 
 GREETING=$(parse_field greeting)
